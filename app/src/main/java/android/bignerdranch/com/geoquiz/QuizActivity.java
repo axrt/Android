@@ -62,8 +62,8 @@ public class QuizActivity extends ActionBarActivity {
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mIsCheater = false;
                 mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+                mIsCheater = false;
                 updateQuestion();
             }
         });
@@ -107,9 +107,9 @@ public class QuizActivity extends ActionBarActivity {
             } else {
                 messageResId = R.string.incorrect_toast;
             }
-            Toast.makeText(this, messageResId, Toast.LENGTH_SHORT)
-                    .show();
         }
+        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT)
+                .show();
     }
 
     private void updateQuestion() {
